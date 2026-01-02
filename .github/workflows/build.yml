@@ -1,0 +1,24 @@
+            - name: Docker Setup Docker
+  # You may pin to the exact commit or the version.
+  # uses: docker/setup-docker-action@e61617a16c407a86262fb923c35a616ddbe070b3
+  uses: docker/setup-docker-action@v4.6.0
+  with:
+    # Docker CE version. (e.g, v24.0.9)
+    version: # optional, default is latest
+    # Docker CE channel. (e.g, stable, edge or test)
+    channel: # optional
+    # Docker daemon JSON configuration
+    daemon-config: # optional
+    # TCP port to expose the Docker API locally
+    tcp-port: # optional
+    # Docker context name. (default setup-docker-action)
+    context: # optional
+    # Set DOCKER_HOST environment variable to docker socket path
+    set-host: # optional, default is false
+    # Enable Docker rootless mode
+    rootless: # optional, default is false
+    # Docker runtime base directory
+    runtime-basedir: # optional
+    # GitHub Token used to get releases and download assets
+    github-token: # optional, default is ${{ github.token }}
+          
