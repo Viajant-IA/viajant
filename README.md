@@ -19,3 +19,8 @@ Para rodar localmente a Viajant, você necessita de uma API Key, um arquivo Pyth
 Agora caso você seja uma pessoa que gosta de por a mão na massa basta fazer um PR (Pull Request) aplicando sua solução. Nós analisaremos e se tudo estiver certo aplicaremos sua solução no projeto :D
 
 **Lembrando que, OPEN-SOURCE é diferente de CÓDIGO-LIVRE. Isso significa que, ele não pode ser copiado, vendido, redistribuído ou usado em outros projetos, pois ele é de propriedade minha.**
+
+## 💁 Contribuidores
+Agradeço á todos os contribuidores!
+
+[@TetraApps - Obrigado por nos ajudar no desenvolvimento do nosso app mobile!](https://github.com/TetraApps)
