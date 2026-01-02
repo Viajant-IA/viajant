@@ -3,6 +3,9 @@ import requests
 import json
 import os
 from dotenv import load_dotenv
+from datetime import timedelta, datetime
+import jwt
+import hashlib
 
 # Config. API
 load_dotenv()
@@ -30,6 +33,8 @@ app.config['SECRET_KEY'] = SECRET_KEY
 def home():
     return render_template ("index.html")
 
+# Configuração do users.json para fazer com que escreva os usuários
+...
 
 # Configuração de API
 @app.route("/api", methods=["POST"])
@@ -57,3 +62,58 @@ def api_chat():
     )
 
     return jsonify(resp.json())
+
+# Rotas
+@app.route("/chat")
+def chat():
+    user = request.args.get("user")
+    return render_template ("chat.html", user=user)
+
+@app.route("/docs")
+def docs():
+    return render_template ("docs.html")
+
+@app.route("/about-us")
+def about_us():
+    return render_template ("about-us.html")
+
+@app.route("/download/android")
+def android():
+    return render_template("android.html")
+
+@app.route("/download/ios")
+def iphone():
+    return render_template ("ios.html")
+
+
+
+def hash_password(password):
+    return hashlib.sha256(password.encode()).hexdigest()
+
+def generate_auth_token(user_id):
+    try:
+        payload = {
+            'exp': datetime.utcnow() + timedelta(days=TOKEN_EXPIRATION_DAYS),
+            'iat': datetime.utcnow(),
+            'sub': user_id
+        }
+        return jwt.encode(payload, SECRET_KEY, algorithm='')
+    except Exception as e:
+        return str(e)
+
+
+@app.route('/login', methods=['POST'])
+def login():
+    data = request.get_json()
+
+    if not data:
+        return jsonify({"message": "JSON inválido"}), 400
+
+    username = data.get('username')
+    password = data.get('password')
+
+    ... # O Resto aqui é totalmente confidencial para deixar Open Source.
+
+
+if __name__ == '__main__':
+    app.run(debug=True, port=5000)
