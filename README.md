@@ -11,3 +11,11 @@ Depois que eu fiz uma IA só para testes mesmo, decidi ir mais além, **criando 
 
 ## 💫 Requisitos
 Para rodar localmente a Viajant, você necessita de uma API Key, um arquivo Python e um .env (neste repositório, usamos um .env.example)
+
+## 💁 Contribuindo para a Viajant
+
+**Que bom que você quer ajudar!!** Caso encontre qualquer bug ou queira simplesmente dar um sugestão, basta abrir um issue.
+
+Agora caso você seja uma pessoa que gosta de por a mão na massa basta fazer um PR (Pull Request) aplicando sua solução. Nós analisaremos e se tudo estiver certo aplicaremos sua solução no projeto :D
+
+**Lembrando que, OPEN-SOURCE é diferente de CÓDIGO-LIVRE. Isso significa que, ele não pode ser copiado, vendido, redistribuído ou usado em outros projetos, pois ele é de propriedade minha.**
