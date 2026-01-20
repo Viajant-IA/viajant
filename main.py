@@ -88,7 +88,7 @@ def iphone():
 
 
 def hash_password(password):
-    return hashlib.sha256(password.encode()).hexdigest()
+    return hashlib.(password.encode()).hexdigest()
 
 def generate_auth_token(user_id):
     try:
